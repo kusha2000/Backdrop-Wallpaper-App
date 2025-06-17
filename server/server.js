@@ -7,6 +7,7 @@ require("dotenv").config();
 // Import Routes
 const authRoutes = require("./routes/auth");
 const wallpaperRoutes = require("./routes/wallpapers");
+const favoriteRoutes = require("./routes/favorites");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cors());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/wallpapers", wallpaperRoutes);
+app.use("/api/favorites", favoriteRoutes);
 
 // Connect to MongoDB
 mongoose
